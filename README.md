@@ -35,4 +35,4 @@ To check if all is alright
 ```dockerfile
     docker logs <containerName>
 ```
-!!! Be sure to configure the application.properties file(./src/main/resources).
+!!! Be sure to configure the application.properties file(`./src/main/resources`).
