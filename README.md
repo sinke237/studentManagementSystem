@@ -2,9 +2,11 @@
  Playing with Spring Boot; practicing 
  - CRUD
  - Authorisation
- - Integration testing with JGiven
+ - Integration testing with JGiven, TestContainers
 
 ### Database Setup
+I am assuming you want a disposible database like me.
+A database running in a docker container.
 ```dockerfile
 docker pull postgres
 ```
@@ -36,3 +38,14 @@ To check if all is alright
     docker logs <containerName>
 ```
 !!! Be sure to configure the application.properties file(`./src/main/resources`).
+
+### Check the data inside your database
+```dockerfile
+docker exec -it <containerName> bash
+```
+```dockerfile
+psql -U <username> <databaseName>
+```
+```sql
+SELECT * FROM <tableName>;
+```
