@@ -7,6 +7,8 @@
 ### Database Setup
 I am assuming you want a disposible database like me.
 A database running in a docker container.
+
+*** I chose not to write  a dockerfile. I want you to SUFFER!!!!!!!!!!! ***
 ```dockerfile
 docker pull postgres
 ```
