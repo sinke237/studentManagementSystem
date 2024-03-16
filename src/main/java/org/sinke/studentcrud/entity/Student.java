@@ -22,6 +22,12 @@ public class Student {
         this.email = email;
     }
 
+    public Student(long id, String firstNamename, String lastName) {
+        this.id = id;
+        this.firstName = firstNamename;
+        this.lastName = lastName;
+    }
+
     public Long getId() {
         return id;
     }
