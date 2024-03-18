@@ -22,7 +22,7 @@ public class Student {
         this.email = email;
     }
 
-    public Student(long id, String firstNamename, String lastName) {
+    public Student(long id, String firstNamename, String lastName, String email) {
         this.id = id;
         this.firstName = firstNamename;
         this.lastName = lastName;
