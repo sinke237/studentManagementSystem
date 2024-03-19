@@ -16,7 +16,9 @@ public class StudentGiven extends Stage<StudentGiven> {
     private StudentRepository studentRepository;
 
     @BeforeStage
-    public void a_student_service(){
+    public StudentGiven a_student_service(){
+
         MockitoAnnotations.openMocks(this);
+        return self();
     }
 }
