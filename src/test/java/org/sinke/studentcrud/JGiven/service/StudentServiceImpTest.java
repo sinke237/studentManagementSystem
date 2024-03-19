@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.sinke.studentcrud.entity.Student;
 import org.sinke.studentcrud.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 public class StudentServiceImpTest extends ScenarioTest<StudentGiven, StudentWhen, StudentThen> {
     @Autowired
     private StudentRepository studentRepository;
@@ -17,7 +19,7 @@ public class StudentServiceImpTest extends ScenarioTest<StudentGiven, StudentWhe
 
         when().a_student_is_saved(student);
 
-        then().the_student_should_be_saved_successfully();
+        then().the_student_should_be_saved_successfully()
             .and().the_student_should_be_retreivable();
     }
 }
