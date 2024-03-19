@@ -34,12 +34,20 @@ public class StudentServiceImpTest extends ScenarioTest<StudentGiven, StudentWhe
         return new StudentWhen(studentRepository);
     }
 
+    @Override
+    public StudentThen then(){
+        StudentThen studentThen = new StudentThen();
+        studentThen.savedStudent = when().getSavedStudent();
+        return studentThen;
+    }
+
     @Test
     public void saving_and_retrieving_student_should_work_correctly(){
-        given().a_student_service(studentRepository);
         Student student = new Student(1L, "Bob", "Thomas", "bob@gmail.com");
 
         Mockito.when(studentRepository.save(student)).thenReturn(student);
+
+        given().a_student_service(studentRepository);
         when().a_student_is_saved(student);
 
         then().the_student_should_be_saved_successfully()
